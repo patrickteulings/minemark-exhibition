@@ -3,10 +3,28 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
+  <Navigation />
   <router-view/>
 </template>
 
-<style lang="scss">
+<script lang='ts'>
+
+import { defineComponent } from 'vue'
+import Navigation from '@/components/Navigation.vue'
+
+export default defineComponent({
+  components: {
+    Navigation
+  },
+  setup () {
+    return {
+
+    }
+  }
+})
+
+</script>
+<style lang="scss" src="./styles/style.scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

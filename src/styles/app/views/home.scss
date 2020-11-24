@@ -1,0 +1,107 @@
+
+.home {
+  @include position(absolute);
+  @include size(100%);
+
+  .background {
+    @include position(absolute);
+    @include size(100vw, 100vh);
+    overflow: hidden;
+
+    &__overlay {
+      @include position(absolute);
+      @include size(100%);
+      background: rgba(color('black'), 0.6);
+    }
+    img {
+      min-width: 100vw;
+      min-height: 100vh;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .content-wrapper {
+    @include position(absolute);
+    @include size(100%);
+    @include flex-center('both');
+    flex-direction: column;
+  }
+
+  .intro-wrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    @include font-size(40px);
+    font-weight: 400;
+    line-height: 1.4em;
+    font-family: $serif-font-face;
+    color: color('white');
+  }
+}
+
+.home__navigation {
+  margin: 0 auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  box-shadow: 2px 2px 22px 0px rgba(0,0,0,0.75);
+
+  .navigation__item {
+    @include position();
+    @include innerspace(24px);
+    @include font-size(24px);
+    background: color('white');
+    border-right: 1px solid #949494;
+    font-family: $serif-font-face;
+    font-weight: 100;
+    text-decoration: none;
+    color: color('faux-red');
+
+    &:not(:first-child) {
+      .title {
+        color: #686;
+      }
+      .subtitle {
+        color: #686;
+      }
+    }
+
+    span {
+      display: block;
+    }
+
+    .subtitle {
+      font-family: $handwriting-font-face-shadows;
+      @include font-size(16px);
+      color: #006C36;
+      margin-bottom: 8px;
+    }
+
+    &:before {
+      content: '';
+      background: #FFE4E4;
+      @include position(absolute, 0, auto, auto, 0);
+      @include transition();
+      height: 0%;
+      width: 100%;
+    }
+    &:last-child {
+      border-right: 0px solid #949494;
+    }
+
+    &:hover {
+      .title {
+        color: color('faux-red');
+      }
+      .subtitle {
+        color: #006C36;
+      }
+      &:before {
+        height: 8px;
+      }
+    }
+  }
+}

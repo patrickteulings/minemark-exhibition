@@ -1,0 +1,54 @@
+$easeOutExpo: cubic-bezier(.06,.86,.43,.98);
+
+.navigation {
+  @include position(absolute);
+  @include size(100%);
+  transform: translateX(-100%);
+  transition: all 0.3s $easeOutExpo;
+  background: color('white');
+  z-index: 100;
+
+  &.opened {
+    transform: translateX(0);
+
+    .btn--hamburger {
+      right: 24px;
+    }
+  }
+
+  &__item {
+    display: block;
+  }
+}
+
+.btn {
+  &--hamburger {
+    @include position(absolute, auto, 24px, -64px, auto);
+    @include size(40px);
+    transition: all 0.6s $easeOutExpo;
+    // transition-delay: 0.1s;
+    border: none;
+    background: none;
+
+    span {
+      @include position(absolute, 5px, 8px);
+      background: #AD1A4F;
+      display: inline-block;
+      width: calc(100% - 16px);
+      height: 1px;
+
+      &:nth-child(1) {
+        top: 16px;
+        width: calc(80% - 16px);
+      }
+      &:nth-child(2) {
+        top: 24px;
+        width: calc(90% - 16px);
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
+import ExhibitionDetail from '../views/ExhibitionDetail.vue'
+import Exhibition from '../views/Exhibition.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -8,35 +10,28 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/the-project',
+    name: 'TheProject',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Project.vue')
   },
   {
     path: '/about-minemark',
-    name: 'AboutMinemark',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    name: 'about-minemark',
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutMineMark.vue')
   },
   {
-    path: '/exhibition',
+    path: '/exhibition/:id?',
     name: 'Exhibition',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Exhibition.vue')
+    component: Exhibition,
+    children: [{
+      path: 'detail',
+      name: 'ExhibitionDetail',
+      component: ExhibitionDetail
+    }]
   },
   {
     path: '/donate',
-    name: 'Donate',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    name: 'donate',
     component: () => import(/* webpackChunkName: "about" */ '../views/Donate.vue')
   }
 ]

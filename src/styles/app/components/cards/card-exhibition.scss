@@ -1,0 +1,21 @@
+.exhibition-card {
+  @include position();
+
+  &:hover {
+    .exhibition-card__overlay {
+      opacity: 0;
+    }
+  }
+}
+
+.exhibition-card__image {
+  width: 100%;
+}
+
+.exhibition-card__overlay {
+  @include position(absolute);
+  @include size(100%);
+  @include transition();
+  background: #1F2338;
+  opacity: 0.8;
+}

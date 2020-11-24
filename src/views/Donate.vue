@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    About
+  <div class="donate">
+    Donate
   </div>
 </template>
 

@@ -1,0 +1,7 @@
+.exhibition {
+  &__cards {
+    padding-left: 128px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}

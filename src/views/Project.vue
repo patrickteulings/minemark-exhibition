@@ -2,7 +2,7 @@
   <div class="the-project">
     <div class="content-wrapper">
       <section class="content__title">
-        <h1>ABOUT THE EXHIBITION</h1>
+        <h1><span>ABOUT THE EXHIBITION</span></h1>
 
       </section>
       <section class="content__socials">
@@ -17,7 +17,6 @@
         </p>
       </section>
     </div>
-    The Project
   </div>
 </template>
 

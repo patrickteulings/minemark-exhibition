@@ -19,7 +19,7 @@ export default defineComponent({
     }
   },
   setup (props) {
-    const selectedIcon = `<img src="/img/icons/feather/${props.iconProperties.name}.svg"/>`
+    const selectedIcon = `<img class="icon" src="/img/icons/feather/${props.iconProperties.name}.svg"/>`
     return {
       selectedIcon
     }

@@ -1,0 +1,9 @@
+.socials {
+  @include position();
+  z-index: 100;
+  background: color('white');
+
+  .hidden {
+    @include hide-visually();
+  }
+}

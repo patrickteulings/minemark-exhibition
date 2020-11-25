@@ -1,6 +1,22 @@
 .exhibition {
+
+  &__navigation {
+    @include position(fixed);
+    width: 96px;
+    height: 100vh;
+    background: color('white');
+
+    .icon-wrapper {
+      @include size(40px);
+      @include flex-center('both');
+      @include position(absolute, 28px, 50%);
+      margin-top: -20px;
+      transform: rotate(-90deg);
+    }
+  }
+
   &__cards {
-    padding-left: 128px;
+    padding-left: 96px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
   }

@@ -1,4 +1,20 @@
 .exhibition-detail {
-  @include position(absolute);
-  @include size(calc(100vw - 120px), 100vh);
+  @include position(absolute, 96px);
+  @include size(calc(100vw - 96px), 100vh);
+  overflow: hidden;
+
+  .icon {
+    @include size(16px);
+    @include transition();
+    opacity: 0.4;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .socials-wrapper {
+    @include position(absolute, auto, auto, 100px, 100px)
+  }
 }

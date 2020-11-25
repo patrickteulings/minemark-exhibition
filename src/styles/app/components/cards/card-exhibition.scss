@@ -1,5 +1,7 @@
 .exhibition-card {
   @include position();
+  min-height: 360px;
+  background-size: cover;
 
   &:hover {
     .exhibition-card__overlay {

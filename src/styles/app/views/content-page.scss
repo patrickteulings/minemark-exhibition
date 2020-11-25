@@ -1,18 +1,19 @@
-.content-wrapper {
+.the-project.content-wrapper {
   margin: 0 auto;
   max-width: 40%;
-}
 
-h1 {
-  font-family: $handwriting-font-face;
-  @include font-size(64px);
-  @include position();
 
-  &:after{
-    content: '';
-    width: 100%;
-    height: 10px;
-    @include position(absolute, 0, 0, 0, auto);
-    background-color: #FFE4E4;
+  h1 {
+    font-family: $handwriting-font-face;
+    @include font-size(64px);
+    @include position();
+
+    &:after{
+      content: '';
+      width: 100%;
+      height: 10px;
+      @include position(absolute, 0, 0, 0, auto);
+      background-color: #FFE4E4;
+    }
   }
 }
